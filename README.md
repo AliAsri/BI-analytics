@@ -7,7 +7,6 @@
 ![SSAS](https://img.shields.io/badge/SSAS-Tabular_Model-orange.svg)
 ![Machine Learning](https://img.shields.io/badge/Machine_Learning-Scikit_Learn-green.svg)
 
-Bienvenue dans le dépôt officiel du projet de **Business Intelligence (BI) et d'Intelligence Artificielle (IA)** développé pour le compte du **Ministère de la Jeunesse, de la Culture et de la Communication (MJCC)** du Maroc.
 
 ---
 
