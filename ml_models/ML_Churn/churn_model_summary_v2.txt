@@ -1,0 +1,46 @@
+======================================================================
+PREDICTION DU CHURN - RESULTATS OPTIMISES v2
+Projet MJCC - Pass Jeunes
+======================================================================
+
+Date de reference (cutoff) : 2024-06-30
+Dataset : 10,000 beneficiaires
+Churned : 4,275 (42.8%)
+Actifs  : 5,725 (57.2%)
+Features : 38
+
+OPTIMISATIONS APPLIQUEES:
+  - Feature Engineering avance (RFM, tendances, interactions)
+  - SMOTE oversampling pour equilibrer les classes
+  - One-Hot Encoding + StandardScaler
+  - 5 modeles : LR, RF, GB, XGBoost, Stacking
+
+RESULTATS:
+
+  Logistic Regression:
+    Accuracy=0.6655  Precision=0.6336  Recall=0.5158  F1=0.5687  AUC=0.7174
+
+  Random Forest:
+    Accuracy=0.6915  Precision=0.6570  Recall=0.5825  F1=0.6175  AUC=0.7672
+
+  Gradient Boosting:
+    Accuracy=0.6880  Precision=0.6542  Recall=0.5731  F1=0.6110  AUC=0.7602
+
+  XGBoost:
+    Accuracy=0.6725  Precision=0.6292  Recall=0.5696  F1=0.5979  AUC=0.7521
+
+  Stacking Ensemble:
+    Accuracy=0.6835  Precision=0.6350  Recall=0.6105  F1=0.6225  AUC=0.7691
+
+MEILLEUR MODELE : Stacking Ensemble (F1=0.6225)
+Cross-Validation F1 (5-fold) : 0.5532 (+/- 0.0208)
+
+RAPPORT DE CLASSIFICATION:
+              precision    recall  f1-score   support
+
+       Actif       0.72      0.74      0.73      1145
+      Churne       0.64      0.61      0.62       855
+
+    accuracy                           0.68      2000
+   macro avg       0.68      0.67      0.68      2000
+weighted avg       0.68      0.68      0.68      2000

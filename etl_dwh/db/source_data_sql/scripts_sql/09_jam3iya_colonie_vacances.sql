@@ -1,0 +1,47 @@
+-- Auto-genere (modele v2) — table colonie_vacances — jam3iya_db
+
+USE jam3iya_db;
+
+INSERT INTO colonie_vacances (nom, ville, region, saison, annee, categorie_cible, duree_jours) VALUES
+    ('Colonie Hiver Khenifra 2024', 'Khenifra', 'Beni Mellal-Khenifra', 'Hiver', 2024, 'Adolescents 15-18 ans', 14),
+    ('Colonie Printemps Kelaat Sraghna 2023', 'Kelaat Sraghna', 'Marrakech-Safi', 'Printemps', 2023, 'Enfants en situation de handicap', 21),
+    ('Colonie Ete Taza 2021', 'Taza', 'Fes-Meknes', 'Ete', 2021, 'Adolescents 15-18 ans', 14),
+    ('Colonie Hiver Chefchaouen 2022', 'Chefchaouen', 'Tanger-Tetouan-Al Hoceima', 'Hiver', 2022, 'Adolescents 15-18 ans', 14),
+    ('Colonie Ete Tanger 2021', 'Tanger', 'Tanger-Tetouan-Al Hoceima', 'Ete', 2021, 'Enfants 7-15 ans', 21),
+    ('Colonie Ete Khenifra 2024', 'Khenifra', 'Beni Mellal-Khenifra', 'Ete', 2024, 'Enfants en situation de handicap', 7),
+    ('Colonie Ete Safi 2021', 'Safi', 'Marrakech-Safi', 'Ete', 2021, 'Adolescents 15-18 ans', 21),
+    ('Colonie Ete Rabat 2021', 'Rabat', 'Rabat-Sale-Kenitra', 'Ete', 2021, 'Enfants 7-15 ans', 15),
+    ('Colonie Ete Tinghir 2022', 'Tinghir', 'Draa-Tafilalet', 'Ete', 2022, 'Adolescents 15-18 ans', 14),
+    ('Colonie Ete Berkane 2024', 'Berkane', 'Oriental', 'Ete', 2024, 'Enfants 7-15 ans', 15),
+    ('Colonie Ete Casablanca 2021', 'Casablanca', 'Casablanca-Settat', 'Ete', 2021, 'Enfants en situation de handicap', 10),
+    ('Colonie Ete Marrakech 2021', 'Marrakech', 'Marrakech-Safi', 'Ete', 2021, 'Enfants 7-15 ans', 15),
+    ('Colonie Ete El Jadida 2022', 'El Jadida', 'Casablanca-Settat', 'Ete', 2022, 'Adolescents 15-18 ans', 7),
+    ('Colonie Ete Al Hoceima 2021', 'Al Hoceima', 'Tanger-Tetouan-Al Hoceima', 'Ete', 2021, 'Enfants en situation de handicap', 10),
+    ('Colonie Ete Safi 2022', 'Safi', 'Marrakech-Safi', 'Ete', 2022, 'Adolescents 15-18 ans', 7),
+    ('Colonie Ete Essaouira 2022', 'Essaouira', 'Marrakech-Safi', 'Ete', 2022, 'Adolescents 15-18 ans', 21),
+    ('Colonie Hiver Taourirt 2021', 'Taourirt', 'Oriental', 'Hiver', 2021, 'Adolescents 15-18 ans', 21),
+    ('Colonie Ete Temara 2021', 'Temara', 'Rabat-Sale-Kenitra', 'Ete', 2021, 'Adolescents 15-18 ans', 10),
+    ('Colonie Ete Sidi Kacem 2022', 'Sidi Kacem', 'Rabat-Sale-Kenitra', 'Ete', 2022, 'Enfants 7-15 ans', 15),
+    ('Colonie Ete Sale 2022', 'Sale', 'Rabat-Sale-Kenitra', 'Ete', 2022, 'Enfants en situation de handicap', 21),
+    ('Colonie Ete Smara 2021', 'Smara', 'Laayoune-Sakia El Hamra', 'Ete', 2021, 'Enfants en situation de handicap', 15),
+    ('Colonie Ete Rabat 2022', 'Rabat', 'Rabat-Sale-Kenitra', 'Ete', 2022, 'Enfants en situation de handicap', 21),
+    ('Colonie Ete Agadir 2024', 'Agadir', 'Souss-Massa', 'Ete', 2024, 'Enfants 7-15 ans', 10),
+    ('Colonie Ete Chefchaouen 2024', 'Chefchaouen', 'Tanger-Tetouan-Al Hoceima', 'Ete', 2024, 'Enfants en situation de handicap', 15),
+    ('Colonie Printemps Casablanca 2022', 'Casablanca', 'Casablanca-Settat', 'Printemps', 2022, 'Adolescents 15-18 ans', 10),
+    ('Colonie Hiver Taourirt 2024', 'Taourirt', 'Oriental', 'Hiver', 2024, 'Enfants en situation de handicap', 21),
+    ('Colonie Hiver Taroudant 2023', 'Taroudant', 'Souss-Massa', 'Hiver', 2023, 'Enfants 7-15 ans', 14),
+    ('Colonie Ete El Jadida 2024', 'El Jadida', 'Casablanca-Settat', 'Ete', 2024, 'Enfants en situation de handicap', 15),
+    ('Colonie Ete Marrakech 2021', 'Marrakech', 'Marrakech-Safi', 'Ete', 2021, 'Enfants en situation de handicap', 21),
+    ('Colonie Ete Casablanca 2024', 'Casablanca', 'Casablanca-Settat', 'Ete', 2024, 'Enfants 7-15 ans', 14),
+    ('Colonie Ete Temara 2021', 'Temara', 'Rabat-Sale-Kenitra', 'Ete', 2021, 'Adolescents 15-18 ans', 15),
+    ('Colonie Ete Casablanca 2021', 'Casablanca', 'Casablanca-Settat', 'Ete', 2021, 'Enfants en situation de handicap', 10),
+    ('Colonie Hiver Essaouira 2023', 'Essaouira', 'Marrakech-Safi', 'Hiver', 2023, 'Adolescents 15-18 ans', 15),
+    ('Colonie Ete Larache 2023', 'Larache', 'Tanger-Tetouan-Al Hoceima', 'Ete', 2023, 'Enfants en situation de handicap', 7),
+    ('Colonie Ete Tiznit 2021', 'Tiznit', 'Souss-Massa', 'Ete', 2021, 'Enfants en situation de handicap', 14),
+    ('Colonie Ete Sefrou 2024', 'Sefrou', 'Fes-Meknes', 'Ete', 2024, 'Enfants en situation de handicap', 10),
+    ('Colonie Ete Kenitra 2021', 'Kenitra', 'Rabat-Sale-Kenitra', 'Ete', 2021, 'Enfants 7-15 ans', 10),
+    ('Colonie Printemps Azilal 2021', 'Azilal', 'Beni Mellal-Khenifra', 'Printemps', 2021, 'Enfants en situation de handicap', 14),
+    ('Colonie Ete Berrechid 2021', 'Berrechid', 'Casablanca-Settat', 'Ete', 2021, 'Enfants 7-15 ans', 15),
+    ('Colonie Ete Taroudant 2022', 'Taroudant', 'Souss-Massa', 'Ete', 2022, 'Adolescents 15-18 ans', 7);
+;
+

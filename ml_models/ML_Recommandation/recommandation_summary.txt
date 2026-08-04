@@ -1,0 +1,13 @@
+MOTEUR DE RECOMMANDATION D'OFFRES PERSONNALISEES
+==================================================
+
+Beneficiaires Scores : 10,000
+Offres Actives       : 114
+Algorithme          : Collaborative Filtering (Cosine Similarity) + Content-Based Fallback
+
+Top 5 Secteurs Recommandes :
+  Culture              : 6,445 (64.5%)
+  Santé                : 1,826 (18.3%)
+  Academy              : 524 (5.2%)
+  Banking              : 342 (3.4%)
+  Loisir               : 306 (3.1%)

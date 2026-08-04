@@ -1,0 +1,27 @@
+# Data files
+data/
+*.csv
+*.xlsx
+*.json
+*.parquet
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+venv/
+env/
+.venv/
+
+# BI & SSAS
+*.bim.layout
+*.bimp
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.agents/
+.gemini/

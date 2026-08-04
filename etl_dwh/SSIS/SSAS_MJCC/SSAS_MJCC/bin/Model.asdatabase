@@ -1,0 +1,1185 @@
+{
+  "name": "SSAS_MJCC_PROD",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "name": "SqlServer localhost DWH_MJCC",
+        "connectionString": "Provider=SQLOLEDB;Data Source=.;Integrated Security=SSPI;Persist Security Info=false;Initial Catalog=DWH_MJCC",
+        "impersonationMode": "impersonateServiceAccount",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "dim_association",
+        "columns": [
+          {
+            "name": "association_id",
+            "dataType": "int64",
+            "sourceColumn": "association_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "source_id",
+            "dataType": "int64",
+            "sourceColumn": "source_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "nom",
+            "dataType": "string",
+            "sourceColumn": "nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "type",
+            "dataType": "string",
+            "sourceColumn": "type",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "domaine_activite",
+            "dataType": "string",
+            "sourceColumn": "domaine_activite",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "statut",
+            "dataType": "string",
+            "sourceColumn": "statut",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "nb_membres",
+            "dataType": "int64",
+            "sourceColumn": "nb_membres",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "date_creation",
+            "dataType": "string",
+            "sourceColumn": "date_creation",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "date_chargement",
+            "dataType": "dateTime",
+            "sourceColumn": "date_chargement",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_association",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[dim_association].*   FROM [dbo].[dim_association] ",
+              "dataSource": "SqlServer localhost DWH_MJCC"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[dim_association].*   FROM [dbo].[dim_association] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dim_association"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dim_beneficiaire",
+        "columns": [
+          {
+            "name": "beneficiaire_id",
+            "dataType": "int64",
+            "sourceColumn": "beneficiaire_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "source_id",
+            "dataType": "int64",
+            "sourceColumn": "source_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "cin",
+            "dataType": "string",
+            "sourceColumn": "cin",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "nom",
+            "dataType": "string",
+            "sourceColumn": "nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "prenom",
+            "dataType": "string",
+            "sourceColumn": "prenom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "genre",
+            "dataType": "string",
+            "sourceColumn": "genre",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "date_naissance",
+            "dataType": "string",
+            "sourceColumn": "date_naissance",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "nationalite",
+            "dataType": "string",
+            "sourceColumn": "nationalite",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "type_statut",
+            "dataType": "string",
+            "sourceColumn": "type_statut",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "en_situation_handicap",
+            "dataType": "boolean",
+            "sourceColumn": "en_situation_handicap",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "Boolean"
+          },
+          {
+            "name": "statut_pass",
+            "dataType": "string",
+            "sourceColumn": "statut_pass",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "tranche_age",
+            "dataType": "string",
+            "sourceColumn": "tranche_age",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "date_inscription",
+            "dataType": "string",
+            "sourceColumn": "date_inscription",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "date_chargement",
+            "dataType": "dateTime",
+            "sourceColumn": "date_chargement",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_beneficiaire",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[dim_beneficiaire].*   FROM [dbo].[dim_beneficiaire] ",
+              "dataSource": "SqlServer localhost DWH_MJCC"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[dim_beneficiaire].*   FROM [dbo].[dim_beneficiaire] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dim_beneficiaire"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dim_maison_jeunes",
+        "columns": [
+          {
+            "name": "maison_id",
+            "dataType": "int64",
+            "sourceColumn": "maison_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "source_id",
+            "dataType": "int64",
+            "sourceColumn": "source_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "nom",
+            "dataType": "string",
+            "sourceColumn": "nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "capacite_accueil",
+            "dataType": "int64",
+            "sourceColumn": "capacite_accueil",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "statut",
+            "dataType": "string",
+            "sourceColumn": "statut",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "date_ouverture",
+            "dataType": "string",
+            "sourceColumn": "date_ouverture",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "date_chargement",
+            "dataType": "dateTime",
+            "sourceColumn": "date_chargement",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_maison_jeunes",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[dim_maison_jeunes].*   FROM [dbo].[dim_maison_jeunes] ",
+              "dataSource": "SqlServer localhost DWH_MJCC"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[dim_maison_jeunes].*   FROM [dbo].[dim_maison_jeunes] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dim_maison_jeunes"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dim_offre",
+        "columns": [
+          {
+            "name": "offre_id",
+            "dataType": "int64",
+            "sourceColumn": "offre_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "source_id",
+            "dataType": "int64",
+            "sourceColumn": "source_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "categorie",
+            "dataType": "string",
+            "sourceColumn": "categorie",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "nom_offre",
+            "dataType": "string",
+            "sourceColumn": "nom_offre",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "type_avantage",
+            "dataType": "string",
+            "sourceColumn": "type_avantage",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "valeur_avantage",
+            "dataType": "string",
+            "sourceColumn": "valeur_avantage",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "unite_avantage",
+            "dataType": "string",
+            "sourceColumn": "unite_avantage",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "tarif_pass_jeunes",
+            "dataType": "string",
+            "sourceColumn": "tarif_pass_jeunes",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "actif",
+            "dataType": "boolean",
+            "sourceColumn": "actif",
+            "sourceProviderType": "Boolean"
+          },
+          {
+            "name": "date_chargement",
+            "dataType": "dateTime",
+            "sourceColumn": "date_chargement",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "nom_partenaire",
+            "dataType": "string",
+            "sourceColumn": "nom_partenaire",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "secteur",
+            "dataType": "string",
+            "sourceColumn": "secteur",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "description",
+            "dataType": "string",
+            "sourceColumn": "description",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "conditions",
+            "dataType": "string",
+            "sourceColumn": "conditions",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "tarif_public",
+            "dataType": "string",
+            "sourceColumn": "tarif_public",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "montant_a_debiter",
+            "dataType": "string",
+            "sourceColumn": "montant_a_debiter",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "montant_a_payer",
+            "dataType": "string",
+            "sourceColumn": "montant_a_payer",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "solde_initial",
+            "dataType": "string",
+            "sourceColumn": "solde_initial",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "solde_mensuel",
+            "dataType": "string",
+            "sourceColumn": "solde_mensuel",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ville_offre",
+            "dataType": "string",
+            "sourceColumn": "ville_offre",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "region_offre",
+            "dataType": "string",
+            "sourceColumn": "region_offre",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_offre",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[dim_offre].*   FROM [dbo].[dim_offre] ",
+              "dataSource": "SqlServer localhost DWH_MJCC"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[dim_offre].*   FROM [dbo].[dim_offre] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dim_offre"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dim_region",
+        "columns": [
+          {
+            "name": "region_id",
+            "dataType": "int64",
+            "sourceColumn": "region_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ville",
+            "dataType": "string",
+            "sourceColumn": "ville",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "region",
+            "dataType": "string",
+            "sourceColumn": "region",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "zone_geo",
+            "dataType": "string",
+            "sourceColumn": "zone_geo",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_region",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[dim_region].*   FROM [dbo].[dim_region] ",
+              "dataSource": "SqlServer localhost DWH_MJCC"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Geographie",
+            "levels": [
+              {
+                "name": "ville",
+                "ordinal": 1,
+                "column": "ville"
+              },
+              {
+                "name": "region",
+                "ordinal": 0,
+                "column": "region"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[dim_region].*   FROM [dbo].[dim_region] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dim_region"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dim_temps",
+        "dataCategory": "Time",
+        "columns": [
+          {
+            "name": "temps_id",
+            "dataType": "int64",
+            "sourceColumn": "temps_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "date_complete",
+            "dataType": "dateTime",
+            "isKey": true,
+            "sourceColumn": "date_complete",
+            "formatString": "General Date",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "jour",
+            "dataType": "int64",
+            "sourceColumn": "jour",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "mois",
+            "dataType": "int64",
+            "sourceColumn": "mois",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "annee",
+            "dataType": "int64",
+            "sourceColumn": "annee",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "trimestre",
+            "dataType": "int64",
+            "sourceColumn": "trimestre",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "nom_jour",
+            "dataType": "string",
+            "sourceColumn": "nom_jour",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "nom_mois",
+            "dataType": "string",
+            "sourceColumn": "nom_mois",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "jour_semaine",
+            "dataType": "int64",
+            "sourceColumn": "jour_semaine",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "semaine_annee",
+            "dataType": "int64",
+            "sourceColumn": "semaine_annee",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "est_weekend",
+            "dataType": "boolean",
+            "sourceColumn": "est_weekend",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "Boolean"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_temps",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[dim_temps].*   FROM [dbo].[dim_temps] ",
+              "dataSource": "SqlServer localhost DWH_MJCC"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Calendrier",
+            "levels": [
+              {
+                "name": "annee",
+                "ordinal": 0,
+                "column": "annee"
+              },
+              {
+                "name": "mois",
+                "ordinal": 2,
+                "column": "mois"
+              },
+              {
+                "name": "jour",
+                "ordinal": 3,
+                "column": "jour"
+              },
+              {
+                "name": "trimestre",
+                "ordinal": 1,
+                "column": "trimestre"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[dim_temps].*   FROM [dbo].[dim_temps] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dim_temps"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "fait_activites",
+        "columns": [
+          {
+            "name": "activite_id",
+            "dataType": "int64",
+            "sourceColumn": "activite_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "source_id",
+            "dataType": "int64",
+            "sourceColumn": "source_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "temps_id",
+            "dataType": "int64",
+            "sourceColumn": "temps_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "region_id",
+            "dataType": "int64",
+            "sourceColumn": "region_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "association_id",
+            "dataType": "int64",
+            "sourceColumn": "association_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "maison_id",
+            "dataType": "int64",
+            "sourceColumn": "maison_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "type_activite",
+            "dataType": "string",
+            "sourceColumn": "type_activite",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "statut",
+            "dataType": "string",
+            "sourceColumn": "statut",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "budget",
+            "dataType": "double",
+            "sourceColumn": "budget",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "nb_participants",
+            "dataType": "int64",
+            "sourceColumn": "nb_participants",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "taux_satisfaction",
+            "dataType": "double",
+            "sourceColumn": "taux_satisfaction",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "budget_consomme",
+            "dataType": "double",
+            "sourceColumn": "budget_consomme",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "duree_jours",
+            "dataType": "int64",
+            "sourceColumn": "duree_jours",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "fait_activites",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[fait_activites].*   FROM [dbo].[fait_activites] ",
+              "dataSource": "SqlServer localhost DWH_MJCC"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Total_Activites",
+            "expression": " COUNTROWS(fait_activites)"
+          },
+          {
+            "name": "Budget_Total_Activites",
+            "expression": " SUM(fait_activites[budget])"
+          },
+          {
+            "name": "Budget_Consomme_Activites",
+            "expression": " SUM(fait_activites[budget_consomme])"
+          },
+          {
+            "name": "Satisfaction_Moyenne",
+            "expression": " AVERAGE(fait_activites[taux_satisfaction])"
+          },
+          {
+            "name": "Total_Participants",
+            "expression": " SUM(fait_activites[nb_participants])"
+          },
+          {
+            "name": "Duree_Moyenne_Jours",
+            "expression": " AVERAGE(fait_activites[duree_jours])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[fait_activites].*   FROM [dbo].[fait_activites] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "fait_activites"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "fait_motatawi3",
+        "columns": [
+          {
+            "name": "motatawi3_id",
+            "dataType": "int64",
+            "sourceColumn": "motatawi3_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "source_id",
+            "dataType": "int64",
+            "sourceColumn": "source_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "temps_id",
+            "dataType": "int64",
+            "sourceColumn": "temps_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "region_id",
+            "dataType": "int64",
+            "sourceColumn": "region_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "beneficiaire_id",
+            "dataType": "int64",
+            "sourceColumn": "beneficiaire_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "edition",
+            "dataType": "string",
+            "sourceColumn": "edition",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "domaine_volontariat",
+            "dataType": "string",
+            "sourceColumn": "domaine_volontariat",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "statut_dossier",
+            "dataType": "string",
+            "sourceColumn": "statut_dossier",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "statut",
+            "dataType": "string",
+            "sourceColumn": "statut",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "niveau_etudes",
+            "dataType": "string",
+            "sourceColumn": "niveau_etudes",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "fait_motatawi3",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[fait_motatawi3].*   FROM [dbo].[fait_motatawi3] ",
+              "dataSource": "SqlServer localhost DWH_MJCC"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Total_Volontaires",
+            "expression": "COUNTROWS(fait_motatawi3)"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[fait_motatawi3].*   FROM [dbo].[fait_motatawi3] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "fait_motatawi3"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "fait_operations",
+        "columns": [
+          {
+            "name": "operation_id",
+            "dataType": "int64",
+            "sourceColumn": "operation_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "source_id",
+            "dataType": "int64",
+            "sourceColumn": "source_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "temps_id",
+            "dataType": "int64",
+            "sourceColumn": "temps_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "region_id",
+            "dataType": "int64",
+            "sourceColumn": "region_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "beneficiaire_id",
+            "dataType": "int64",
+            "sourceColumn": "beneficiaire_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "offre_id",
+            "dataType": "int64",
+            "sourceColumn": "offre_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "montant_reduction",
+            "dataType": "double",
+            "sourceColumn": "montant_reduction",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "nb_operations",
+            "dataType": "int64",
+            "sourceColumn": "nb_operations",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "fait_operations",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[fait_operations].*   FROM [dbo].[fait_operations] ",
+              "dataSource": "SqlServer localhost DWH_MJCC"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Total_Operations",
+            "expression": " COUNTROWS(fait_operations)"
+          },
+          {
+            "name": "Montant_Total_Reductions",
+            "expression": " SUM(fait_operations[montant_reduction])"
+          },
+          {
+            "name": "Nb_Beneficiaires_Actifs",
+            "expression": " DISTINCTCOUNT(fait_operations[beneficiaire_id])"
+          },
+          {
+            "name": "Montant_Moyen_Reduction",
+            "expression": " AVERAGE(fait_operations[montant_reduction])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[fait_operations].*   FROM [dbo].[fait_operations] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "fait_operations"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "fait_solde",
+        "columns": [
+          {
+            "name": "solde_id",
+            "dataType": "int64",
+            "sourceColumn": "solde_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "source_id",
+            "dataType": "int64",
+            "sourceColumn": "source_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "temps_id",
+            "dataType": "int64",
+            "sourceColumn": "temps_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "beneficiaire_id",
+            "dataType": "int64",
+            "sourceColumn": "beneficiaire_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "annee",
+            "dataType": "int64",
+            "sourceColumn": "annee",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "credit_initial",
+            "dataType": "double",
+            "sourceColumn": "credit_initial",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "credit_restant",
+            "dataType": "double",
+            "sourceColumn": "credit_restant",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "credit_consomme",
+            "dataType": "double",
+            "sourceColumn": "credit_consomme",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "offre_id",
+            "dataType": "int64",
+            "sourceColumn": "offre_id",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "fait_solde",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[fait_solde].*   FROM [dbo].[fait_solde] ",
+              "dataSource": "SqlServer localhost DWH_MJCC"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Credit_Initial_Total",
+            "expression": " SUM(fait_solde[credit_initial])"
+          },
+          {
+            "name": "Credit_Consomme_Total",
+            "expression": " SUM(fait_solde[credit_initial]) - SUM(fait_solde[credit_restant])"
+          },
+          {
+            "name": "Credit_Restant_Total",
+            "expression": " SUM(fait_solde[credit_restant])"
+          },
+          {
+            "name": "Taux_Utilisation_Credit",
+            "expression": " DIVIDE(SUM(fait_solde[credit_initial]) - SUM(fait_solde[credit_restant]), SUM(fait_solde[credit_initial]), 0)"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[fait_solde].*   FROM [dbo].[fait_solde] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "fait_solde"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "6c4e1895-3e43-4c2a-aac3-330a26b53aa7",
+        "fromTable": "fait_activites",
+        "fromColumn": "temps_id",
+        "toTable": "dim_temps",
+        "toColumn": "temps_id"
+      },
+      {
+        "name": "75de8441-d798-405b-a4a0-6a270b736ca0",
+        "fromTable": "fait_motatawi3",
+        "fromColumn": "region_id",
+        "toTable": "dim_region",
+        "toColumn": "region_id"
+      },
+      {
+        "name": "8e973a79-f321-4754-8831-3a37c88565c7",
+        "fromTable": "fait_motatawi3",
+        "fromColumn": "temps_id",
+        "toTable": "dim_temps",
+        "toColumn": "temps_id"
+      },
+      {
+        "name": "c25c539c-4aeb-467c-b8e7-672ae1169cc0",
+        "fromTable": "fait_operations",
+        "fromColumn": "beneficiaire_id",
+        "toTable": "dim_beneficiaire",
+        "toColumn": "beneficiaire_id"
+      },
+      {
+        "name": "8536b482-5729-4afe-a258-0c404b663fe2",
+        "fromTable": "fait_operations",
+        "fromColumn": "region_id",
+        "toTable": "dim_region",
+        "toColumn": "region_id"
+      },
+      {
+        "name": "38a2b8cf-5f6a-4e84-98d3-dc1c6e669511",
+        "fromTable": "fait_operations",
+        "fromColumn": "temps_id",
+        "toTable": "dim_temps",
+        "toColumn": "temps_id"
+      },
+      {
+        "name": "332321a1-6afd-4df8-b9a4-3155c1ba1f35",
+        "fromTable": "fait_solde",
+        "fromColumn": "beneficiaire_id",
+        "toTable": "dim_beneficiaire",
+        "toColumn": "beneficiaire_id"
+      },
+      {
+        "name": "678ea61e-8e88-45ee-9909-7ee382411b63",
+        "fromTable": "fait_solde",
+        "fromColumn": "temps_id",
+        "toTable": "dim_temps",
+        "toColumn": "temps_id"
+      },
+      {
+        "name": "7a0ded4f-8f9f-4361-8046-fb268185516e",
+        "fromTable": "fait_activites",
+        "fromColumn": "association_id",
+        "toTable": "dim_association",
+        "toColumn": "association_id"
+      },
+      {
+        "name": "0f2ce6fd-a39c-412b-b121-27ca269e1547",
+        "fromTable": "fait_activites",
+        "fromColumn": "maison_id",
+        "toTable": "dim_maison_jeunes",
+        "toColumn": "maison_id"
+      },
+      {
+        "name": "ef860901-0f29-418e-9848-4166dc8a7da7",
+        "fromTable": "fait_activites",
+        "fromColumn": "region_id",
+        "toTable": "dim_region",
+        "toColumn": "region_id"
+      },
+      {
+        "name": "2d0263cb-eb0d-4191-806f-f6fff5328853",
+        "fromTable": "fait_motatawi3",
+        "fromColumn": "beneficiaire_id",
+        "toTable": "dim_beneficiaire",
+        "toColumn": "beneficiaire_id"
+      },
+      {
+        "name": "13ab8a0c-bd54-4209-b868-9caf3c4c85ee",
+        "fromTable": "fait_operations",
+        "fromColumn": "offre_id",
+        "toTable": "dim_offre",
+        "toColumn": "offre_id"
+      },
+      {
+        "name": "81b6bb49-128a-48a6-8f66-14259ff40117",
+        "fromTable": "fait_solde",
+        "fromColumn": "offre_id",
+        "toTable": "dim_offre",
+        "toColumn": "offre_id"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  }
+}

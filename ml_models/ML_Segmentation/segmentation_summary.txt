@@ -1,0 +1,11 @@
+SEGMENTATION DES BENEFICIAIRES - RESUME
+==================================================
+
+Algorithme : K-Means (K=3)
+Features   : 16
+Silhouette : 0.2960
+
+Segments :
+  Super-Actif          : 3,779 (37.8%)
+  Regulier             : 4,615 (46.2%)
+  Occasionnel          : 1,606 (16.1%)

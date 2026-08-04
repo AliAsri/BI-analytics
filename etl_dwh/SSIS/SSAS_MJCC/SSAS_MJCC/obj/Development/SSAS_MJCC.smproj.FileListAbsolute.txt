@@ -1,0 +1,8 @@
+C:\Users\moali\OneDrive\Desktop\Projet MJCC\SSIS\SSAS_MJCC\SSAS_MJCC\bin\Model.asdatabase
+C:\Users\moali\OneDrive\Desktop\Projet MJCC\SSIS\SSAS_MJCC\SSAS_MJCC\bin\Model.deploymenttargets
+C:\Users\moali\OneDrive\Desktop\Projet MJCC\SSIS\SSAS_MJCC\SSAS_MJCC\bin\Model.deploymentoptions
+C:\Users\moali\OneDrive\Desktop\Projet MJCC\SSIS\SSAS_MJCC\SSAS_MJCC\obj\Development\SSAS_MJCC.smproj.AssemblyReference.cache
+C:\Users\moali\OneDrive\Desktop\Projet MJCC\SSIS\SSAS_MJCC\SSAS_MJCC\obj\Development\SSAS_MJCC.smproj.CoreCompileInputs.cache
+C:\Users\moali\OneDrive\Desktop\Projet MJCC\SSIS\SSAS_MJCC\SSAS_MJCC\obj\Development\Model.asdatabase
+C:\Users\moali\OneDrive\Desktop\Projet MJCC\SSIS\SSAS_MJCC\SSAS_MJCC\obj\Development\Model.deploymentoptions
+C:\Users\moali\OneDrive\Desktop\Projet MJCC\SSIS\SSAS_MJCC\SSAS_MJCC\obj\Development\Model.deploymenttargets
