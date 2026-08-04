@@ -134,5 +134,3 @@ Les algorithmes Python interagissent directement avec SQL Server via `pyodbc` po
    - Exécutez séquentiellement les modèles (ex: `python ML_Churn/churn_prediction_v2.py`) pour générer les prédictions en base.
 4. **Power BI** : Ouvrez `bi_dashboard/MJCC_Dashboard.pbix` et actualisez les données pour visualiser les analyses et les KPIs ML.
 
----
-*Projet développé avec passion pour l'amélioration des services publics par la Donnée.*
