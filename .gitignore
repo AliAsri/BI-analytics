@@ -38,3 +38,7 @@ obj/
 *.rar
 *.zip
 *.docx
+
+# VS user files
+*.dtproj.user
+*.bim_*.settings
