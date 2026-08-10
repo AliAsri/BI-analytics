@@ -343,7 +343,7 @@ def update_ssas_model():
     if r.stderr.strip():
         print("  STDERR:", r.stderr.strip())
 
-    os.remove(ps_path)
+    # os.remove(ps_path)  # Commenté pour conserver le script et pouvoir le relancer manuellement
 
 
 def main():

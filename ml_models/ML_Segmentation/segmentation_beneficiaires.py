@@ -272,7 +272,7 @@ def update_sql_and_ssas(df: pd.DataFrame, conn_str: str):
         f.write(ps_script)
 
     subprocess.run(["powershell", "-ExecutionPolicy", "Bypass", "-File", ps_path], capture_output=True, text=True)
-    os.remove(ps_path)
+    # os.remove(ps_path)  # Commenté pour conserver le script et pouvoir le relancer manuellement
 
 
 def main():
