@@ -33,3 +33,8 @@ bin/
 obj/
 *.user
 *.vsidx
+
+# Archives et rapports
+*.rar
+*.zip
+*.docx
