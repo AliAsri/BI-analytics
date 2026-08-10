@@ -20,6 +20,7 @@ Fonctions principales :
 
 import os
 import warnings
+from pathlib import Path
 
 import matplotlib
 import matplotlib.pyplot as plt
@@ -491,7 +492,7 @@ def main():
     """Point d'entrée principal du script optimisé."""
     CONN_STR = 'Driver={ODBC Driver 17 for SQL Server};Server=localhost;Database=DWH_MJCC;Trusted_Connection=yes;'
     CUTOFF_DATE = pd.Timestamp('2024-06-30')
-    OUTPUT_DIR = r'c:\Users\moali\OneDrive\Desktop\Projet MJCC\ML_Churn'
+    OUTPUT_DIR = str(Path(__file__).parent)
 
     df_benef, df_ops = extract_data(CONN_STR)
     df = feature_engineering_advanced(df_benef, df_ops, CUTOFF_DATE)

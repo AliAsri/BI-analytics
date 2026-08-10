@@ -13,7 +13,7 @@
 #>
 
 # Define the path to the CSV file
-$csvPath = 'c:\Users\moali\OneDrive\Desktop\Projet MJCC\offres_pass_jeunes_v3.csv'
+$csvPath = Join-Path -Path $PSScriptRoot -ChildPath '..\data\offres_pass_jeunes_v3.csv'
 
 # Import the CSV data
 $csvData = Import-Csv -Path $csvPath -Encoding Default

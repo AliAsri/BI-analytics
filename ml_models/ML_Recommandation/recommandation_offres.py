@@ -21,6 +21,7 @@ Fonctions principales :
 import os
 import subprocess
 import warnings
+from pathlib import Path
 
 import matplotlib
 import matplotlib.pyplot as plt
@@ -257,7 +258,7 @@ def update_sql_and_ssas(df_recs: pd.DataFrame, conn_str: str):
     $server.Disconnect()
     """
 
-    ps_path = r"c:\Users\moali\OneDrive\Desktop\Projet MJCC\update_ssas_rec.ps1"
+    ps_path = str(Path(__file__).parent / "update_ssas_rec.ps1")
     with open(ps_path, "w", encoding="utf-8") as f:
         f.write(ps_script)
 
@@ -268,7 +269,7 @@ def update_sql_and_ssas(df_recs: pd.DataFrame, conn_str: str):
 def main():
     """Point d'entrée du moteur de recommandation."""
     CONN_STR = 'Driver={ODBC Driver 17 for SQL Server};Server=localhost;Database=DWH_MJCC;Trusted_Connection=yes;'
-    OUTPUT_DIR = r'c:\Users\moali\OneDrive\Desktop\Projet MJCC\ML_Recommandation'
+    OUTPUT_DIR = str(Path(__file__).parent)
 
     df_benef, df_ops, df_offres = extract_data(CONN_STR)
     user_item_matrix, item_similarity_df, top_global_offres = build_interaction_matrix(df_ops)

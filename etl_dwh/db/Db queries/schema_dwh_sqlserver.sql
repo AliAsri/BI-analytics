@@ -137,6 +137,7 @@ CREATE TABLE dbo.dim_beneficiaire (
     statut_pass         NVARCHAR(20)  NOT NULL,
     tranche_age         NVARCHAR(20)  NOT NULL,       -- '16-18', '19-22', '23-25', '26-30'
     date_inscription    DATE          NOT NULL,
+    est_membre_association BIT        NOT NULL DEFAULT 0,
     date_chargement     DATETIME      NOT NULL DEFAULT GETDATE()
 );
 GO

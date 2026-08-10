@@ -4,6 +4,7 @@ It reads new offers from output_offres.py and updates the configuration.
 """
 
 import re
+from pathlib import Path
 
 
 def apply_configuration_changes(config_path: str, offers_path: str) -> None:
@@ -57,7 +58,8 @@ def apply_configuration_changes(config_path: str, offers_path: str) -> None:
 
 
 if __name__ == '__main__':
-    CONFIG_FILE_PATH = r'c:\Users\moali\OneDrive\Desktop\Projet MJCC\db\source_data_sql\config_sources.py'
-    OFFERS_FILE_PATH = 'output_offres.py'
+    base_dir = Path(__file__).parent.parent
+    CONFIG_FILE_PATH = str(base_dir / 'etl_dwh' / 'db' / 'source_data_sql' / 'config_sources.py')
+    OFFERS_FILE_PATH = str(base_dir / 'reference' / 'offres_partenaires_reelles.py')
     apply_configuration_changes(CONFIG_FILE_PATH, OFFERS_FILE_PATH)
 

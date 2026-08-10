@@ -22,6 +22,7 @@ Fonctions principales :
 import os
 import subprocess
 import warnings
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -265,7 +266,7 @@ def update_ssas_model():
     print("=" * 70)
 
     dll_path = r"C:\Program Files\Microsoft SQL Server Management Studio 22\Release\Common7\IDE\Microsoft.AnalysisServices.Tabular.dll"
-    ps_path = r"c:\Users\moali\OneDrive\Desktop\Projet MJCC\update_ssas_churn.ps1"
+    ps_path = str(Path(__file__).parent / "update_ssas_churn.ps1")
 
     ps_script = f"""
     Add-Type -Path "{dll_path}"

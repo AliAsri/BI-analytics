@@ -98,9 +98,7 @@ Les algorithmes Python interagissent directement avec SQL Server via `pyodbc` po
 - **Algorithme** : Filtrage Collaboratif (User-Based, Similarité Cosinus) + repli Content-Based.
 - **Intégration** : Top offres et catégorie recommandée ajoutés pour chaque utilisateur.
 
-### 4. Propension à l'Engagement Associatif
-- **Objectif** : Identifier, parmi les bénéficiaires Pass Jeunes non encore membres d'une association, ceux les plus susceptibles de le devenir.
-- **Intégration** : scores réintégrés dans `dim_beneficiaire` (`propension_associative`).
+
 
 ---
 
@@ -114,7 +112,7 @@ Les algorithmes Python interagissent directement avec SQL Server via `pyodbc` po
 │   ├── ML_Churn/           # Prédiction de désabonnement
 │   ├── ML_Recommandation/  # Moteur de recommandation d'offres
 │   ├── ML_Segmentation/    # Clustering K-Means
-│   └── ML_Engagement.../   # Prédiction d'engagement associatif
+
 ├── 📁 reference/           # Référentiel réel des offres partenaires (non confidentiel)
 └── 📁 scripts/             # Utilitaires PowerShell et Python (automatisation)
 ```
