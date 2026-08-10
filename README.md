@@ -143,4 +143,3 @@ Les algorithmes Python interagissent directement avec SQL Server via `pyodbc` po
 
 ## 📄 Documentation complémentaire
 
-Le rapport de stage complet, incluant l'analyse détaillée de l'architecture, les résultats des modèles et les limites identifiées, est disponible séparément (`Rapport_Stage_MJCC.docx`).
