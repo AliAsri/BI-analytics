@@ -25,3 +25,11 @@ env/
 Thumbs.db
 .agents/
 .gemini/
+
+# Visual Studio
+.vs/
+*.suo
+bin/
+obj/
+*.user
+*.vsidx

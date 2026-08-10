@@ -1203,7 +1203,7 @@
         "fromColumn": "date_inscription",
         "toTable": "dim_temps",
         "toColumn": "date_complete",
-        "isActive": true
+        "isActive": false
       }
     ],
     "annotations": [
